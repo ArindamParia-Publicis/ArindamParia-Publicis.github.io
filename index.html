@@ -157,17 +157,41 @@
   </tr>
   <tr>
     <td>2024-03-26</td>
-    <td>Apex Assignment Based on Scenario</td>
+    <td>Apex Assignment Based on Scenarios</td>
     <td><ul>
-      <li>Solving Apex Assignment based on multiple scenarios</li>
+      <li>An apex trigger that updates the LastModifiedDate field on an account record whenever a related contact record is inserted</li>
+      <li>An Apex class that calculates the total amount of closed-won opportunities associated with an account and updates a custom field on the account record accordingly</li>
+      <li>An apex trigger that sends an email notification to the account owner when a new opportunity with an amount greater than $10000 is created for their account</li>
+      <li>An apex class that assignes a specific account owner based on predictive criteria such as account industry or location when an account record is created</li>
+      <li>An apex trigger that prevents the deletion of contact records if they are related to an opportunity with a stage of Closed Won</li>
+      <li>An apex class that generates a unique identifier for new account records and assigns it to a custom field upon record creation</li>
+      <li>An apex trigger that calculates the total number of opportunities associated with each account and updates a custom field on the account record with this count</li>
+      <li>An apex class that validates the format of a custom field on account records and displays an error message if the format is incorrect</li>
+      <li>An apex trigger that autometically creates a follow up task for the account owner when new opportunity is created with a stage of "Needs Analysis"</li>
+      <li>An apex class that queries all closed-won opportunities for the current quater and generates a report showing the total revenue generated</li>
+      <li>An apex trigger that updates the account rating field based on the total value of opportunities associated with the account means set rating to "Hot" if total acount exceeds $100000</li>
+      <li>An apex class that queries account records with a specific industry and updates a custom field on related opportunity records based on this industry</li>
+      <li>An apex trigger that automatically assigns a default account owner for new account records based on predefined criteria means region or territory</li>
+      <li>An apex class that retrieves the average opportunity amount for each industry and updates a custom field on the related account records with this average</li>
+      <li>An apex trigger that validates the uniqueness of a custom field (means account number) across all existing account records and prevents duplicates from being created</li>
     </ul></td>
   </tr>
   <tr>
-    <td>2024-03-26</td>
-    <td>Apex Assignment Based on Enriching Requirement</td>
+    <td>2024-03-27</td>
+    <td>Apex Assignment</td>
     <td><ul>
-      <li>Solving Apex Assignment based on Enriching Requirement given by Udhay Kumar Vr.</li>
-    </ul></td>
+      <li>Create a contact of an account primary and attach it to Account object.</li>
+      <li>Making them primary will change the primary contact in account.</li>
+    </ul>
+    <h2><u>Enriching Requirements</u></h2>
+    <ul>
+      <li>At any point of time, One Primary Contact has to be there for an account.</li>
+      <li>If there are no primary contacts, the field for the primary contact in the Account should read null.</li>
+      <li>Assume there are 0 primary contacts. Write a validation rule that there needs to be atleast One primary contact for the account. This validation needs to be implemented from the Salesforce UI and not by using Apex code.</li>
+      <li>Create a field in Accounts where the Number of Primary Contacts can be given. That number will be the maximum number of primary contacts that can be present for a given account. The number will be a whole number.</li>
+      <li>Implement a validation that will throw an error on deleting the last primary contact, that one needs to make another contact as primary and then come back to delete this one. This error should not be shown if there are no primary contacts for the account or if there are more than 1 primary contact.</li>
+    </ul>
+  </td>
   </tr>
 </table>
 
